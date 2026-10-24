@@ -56,7 +56,7 @@
     <header class="mb-4 flex justify-between items-center">
       <div>
         <h1 class="text-lg md:text-xl font-black tracking-wider text-emerald-500 dark:text-emerald-400">MineGlesus</h1>
-        <p class="text-[11px] text-slate-500 dark:text-slate-400">マインクラフト現実単位換算ツール (1 Block = 1m)</p>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400">MineGlesus (1 Block = 1m)</p>
       </div>
       <div>
         <select id="theme-selector" class="bg-slate-200 dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-800 focus:outline-none focus:border-emerald-500">
@@ -313,7 +313,7 @@
         const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
         if (!isFinite(dist)) {
-          throw new Error('計算値が有効な範囲を超えています');
+          alert('計算値が有効な範囲を超えています');
         }
 
         const km = (dist / 1000).toFixed(3);
@@ -347,7 +347,7 @@
         const deciliters = liters * 10;
 
         if (!isFinite(m3) || !isFinite(liters)) {
-          throw new Error('数値が大きすぎます');
+          alert("数値が大きすぎます");
         }
 
         $('#res-m3').text(`${m3.toLocaleString()} m³`);
@@ -369,7 +369,7 @@
         const neZ = (owZ / 8).toFixed(1);
 
         if (!isFinite(owX) || !isFinite(owZ)) {
-          throw new Error('無効な座標');
+          alert("座標が無効です。");
         }
 
         $('#ne-x').text(neX);
