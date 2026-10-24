@@ -1,0 +1,10 @@
+{
+  "name": "MineGlesus",
+  "short_name": "Glesus",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "icons": []
+}
